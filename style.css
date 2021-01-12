@@ -169,12 +169,12 @@ p {
     object-fit: cover;
 }
 
-.intro h1{
+.intro h1  {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 80px;
+    font-size: 55px;
     color: white;
     width: 800px;
     text-align: center;
