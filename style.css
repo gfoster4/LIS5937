@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Scroll Bar Aesthetic */
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #ffffff
+}
+
+
+/* Header Nav Formatting */
+  
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: inline-block;
+    color: white;
+    text-align: left;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: white; color: black; text-align: right;}
+ul.topnav li a.active:hover {background-color: white; color: black}
+
+ul.topnav li.logo a {font-family: 'Major Mono Display', monospace; text-align: center;}
+ul.topnav li.logo a:hover {background-color: #333;}
+
+ul.topnav li.right, 
+  ul.topnav li.logo {float: none;}
+  ul.topnav li.logo a,
+  ul.topnav li.right a {
+      display: flexbox;
+      width: 100%;
+  }
+  
+
+/* Content Container */
+
+section{
+    height: 100vh;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    width: 100%;
+}
+
+/* Post Containers */
+
+.content-grid .post-box {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: border-box;
+    line-break: auto;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border: 1px solid grey;
+    background-color: black;;
+}
+
+span {
+    font-style: italic;
+}
+
+/* Image Formatting */
+
+img{
+    max-width: 90%;
+    max-height: 600px;
+    display: block;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.book {
+    max-height: 600px;
+    margin-top:20px;
+    border: 5px solid black;
+    border-radius: 40px;
+    float: left;
+    margin-right: 20px;
+}
+
+#profile {
+    max-height: 300px;
+    border: 5px solid black;
+    border-radius: 40px;
+    float: left;
+    margin-right: 20px;
+}
+
+/* PDF Formatting */
+
+
+/* Text Formatting */
+
+h1 {
+    margin-top: 15px;
+    font-size: 1.8em;
+}
+
+h3 {
+    margin-top: 5px;
+    font-size: 1.3em;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.post-box a {
+    color: white;
+    font-style: italic;
+}
+
+
+/* Welcome Scroll Styling */
+.intro {
+    height: 100vh;
+}
+
+.intro video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: white;
+    width: 800px;
+    text-align: center;
+}
+
+
+/* Mobile screen styling */
+
+  @media screen and (max-width: 1000px) {
+    /* Header Nav Formatting */
+    ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    ul.topnav li {float: left;}
+    
+    ul.topnav li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px 40px;
+        text-decoration: none;
+        font-size: 2.5em;
+    }
+    
+    ul.topnav li a:hover:not(.active) {background-color: #111;}
+    
+    ul.topnav li a.active {background-color: white; color: black;}
+    ul.topnav li a.active:hover {background-color: white; color: black}
+    
+    ul.topnav li.logo a {font-family: 'Major Mono Display', monospace;}
+    ul.topnav li.logo a:hover {background-color: #333;}
+    
+    ul.topnav li.right, 
+      ul.topnav li.logo {float: none;}
+      ul.topnav li.logo a,
+      ul.topnav li.right a {
+          display: flexbox;
+          width: 100%;
+      }
+  
+    
+
+    /* Content Container */
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: auto;
+        width: 100%;
+    }
+
+    /* Post Containers */
+
+    .content-grid .post-box {
+        width: 100%;
+        display: border-box;
+        line-break: auto;
+        border-radius: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        justify-items: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        background-color: black;
+    }
+
+    .content-grid .post-box h1,
+    .content-grid .post-box h3 {
+        text-align: center;
+    }
+
+    /* Image Formatting */
+
+    img{
+        width: 100vw;
+        max-height: 75vw;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        display: border-box;
+        border: 5px solid black;
+        border-radius: 20px;
+        object-fit:contain;
+    }
+    
+    #profile {
+        width: 100vw;
+        max-height: 75vw;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        margin-right:auto;
+        margin-left: 0;
+        display: border-box;
+        border: 5px solid black;
+        border-radius: 20px;
+        float: none; 
+        object-fit:contain;
+        justify-self: left;
+        }
+
+    .book {
+        margin-top:20px;
+        border: 5px solid white;
+        border-radius: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+    }
+
+    /* PDF Formatting */
+
+
+    /* Text Formatting */
+
+    h1 {
+        margin-top: 15px;
+        font-size: 3em;
+    }
+
+    h3 {
+        margin-top: 5px;
+        font-size: 2.4em;
+    }
+
+    p {
+        margin-top: 5px;
+        font-size: 2.5em;
+        font-weight: 400;
+    }
+
+  }
