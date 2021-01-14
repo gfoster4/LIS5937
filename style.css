@@ -64,17 +64,23 @@ ul.topnav li.right,
   }
   
 
-/* Content Container */
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+  }
 
-section{
-    height: 100vh;
-}
+
+/* Content Container */
 
 .content-grid {
     display: grid;
     grid-template-columns: auto;
     grid-auto-rows: auto;
     width: 100%;
+    padding-bottom: 2.5em;
 }
 
 /* Post Containers */
@@ -146,6 +152,11 @@ h3 {
     font-size: 1.3em;
 }
 
+h4 {
+    font-size: 1em;
+    text-align: center;
+}
+
 p {
     margin-top: 5px;
     font-size: 1.4em;
@@ -155,29 +166,6 @@ p {
 .post-box a {
     color: white;
     font-style: italic;
-}
-
-
-/* Welcome Scroll Styling */
-.intro {
-    height: 100vh;
-}
-
-.intro video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.intro h1  {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 55px;
-    color: white;
-    width: 800px;
-    text-align: center;
 }
 
 
@@ -201,7 +189,7 @@ p {
         text-align: center;
         padding: 10px 40px;
         text-decoration: none;
-        font-size: 2.5em;
+        font-size: 1.8em;
     }
     
     ul.topnav li a:hover:not(.active) {background-color: #111;}
