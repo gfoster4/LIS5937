@@ -22,6 +22,38 @@
 
     <div class="content-grid">
         <div class="post-box">
+            <h1>Module 02: Test and Fix the Function</h1>
+            <h3>--January 22nd, 2021--</h3>
+            <br>
+            <hr>
+        <br>
+        <p>
+            For this homework assignment, the task was to test a function posted in Canvas and identify it's possible errors. 
+            I ran the function with the predetermined dataset (the vector object named assignment2) and R-Studio returned the following error:
+            <img src="images/module_02_01.JPG">
+            <br>
+            This error appears because the 'myMean' function calls upon two nonexistent data objects in its mean and length functions. It calls upon 
+            an object named "assignment" in its mean function, and it calls upon an object named "someData" in its length function. For the myMean function to 
+            properly compute the mean of "assignment2", it needs to call upon "assignment2" in both the mean and length functions within it.
+            <br>
+            I fixed the errors and wrote a new function named "myWorkingMean" that properly computes the mean of "assignment2", shown below:
+            <img src="images/module_02_02.JPG"> 
+            <br>
+            I also tested the result of "myWorkingMean" against R's built in "mean" function, and they returned the same values. This can be seen in the image above.
+            <br>
+            <br>
+            The full R file for this module can be viewed and downloaded below. The "myMean" function had to be commented out to successfully compile the file since it runs an error. 
+            All updated files for this site and for the modules can be viewed at my github page <a href="https://github.com/gfoster4/LIS5937">here</a>.
+        </p>
+        <br>
+        <object data="module_02.pdf" type="application/pdf" width="100%" height="1000px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+             No biggie... you can <a href="resume.pdf">click here to
+            download the PDF file.</a></p>  
+          </object>
+        <br>
+        </div>
+        <div class="post-box">
             <h1>Module 01: First Assignment</h1>
             <h3>--January 11th, 2021--</h3>
             <br>
