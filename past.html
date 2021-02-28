@@ -23,6 +23,48 @@
     <div class="content-grid">
 
         <div class="post-box">
+            <h1>Module 06: More Matrices in R</h1>
+            <h3>--February 19th, 2021--</h3>
+            <br>
+            <hr>
+        <br>
+        <p>
+            The readings this week were interesting, I enjoyed learning the overall process of creating an R package. The introduction to object-oriented programming in R with the differences
+            between S3 and S4 was cool as well.  
+            <br><br>
+            This week's assignment was fairly simple, I found the diag() function in R to be very straight forward. Adding and subtracting matrices was also much easier to understand than 
+            multiplying them.
+            <br><br>
+            Question 1 first required the creation of two square matrices.
+            <img src="images/module_06_01.png">
+            <img src="images/module_06_002.png">
+            Then some simple addition and subtraction operations with the newly created matrices.
+            <img src="images/module_06_02.png">
+            Question 2 required the creation of a 4 column, 4 row matrix with the values 4,1,2,3 in the diagonal, using the diag() function.
+            <img src="images/module_06_03.png">
+            Question 3 required the creation of a 5 column, 5 row matrix with 3's filling up the diagonal, 2's filling up the rest of the first column, and 1's filling up the rest of the first row.
+            The example provided is below:
+            <img src="images/module_06_04.png">
+            I first generated a 5x5 identity matrix with 3's in the diagonal using the diag() function.
+            <img src="images/module_06_05.png">
+            I then created another 5x5 matrix, this time with zeros everywhere except the 1's and 2's required in the first row and first column.
+            I used matrix(c(0,2,2,2,2,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0), ncol=5).
+            <img src="images/module_06_06.png">
+            Finally I added the two matrices together, getting the desired result.
+            <img src="images/module_06_07.png">
+            <br><br>
+            As always the compiled R file can be found below, and all of the files can be found on my <a href="https://github.com/gfoster4/LIS5937">Github page</a>.
+        </p>
+        <br>
+        <object data="module_06.pdf" type="application/pdf" width="100%" height="1000px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+             No biggie... you can <a href="resume.pdf">click here to
+            download the PDF file.</a></p>  
+          </object>
+        <br>
+        </div>
+        
+        <div class="post-box">
             <h1>Module 05: Matrices in R</h1>
             <h3>--February 14th, 2021--</h3>
             <br>
