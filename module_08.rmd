@@ -1,0 +1,54 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+# Module 8 Assignment
+### -- *Gregory Foster* --
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Step 1
+#### Importing the Dataset with the read.table() function
+```{r}
+x= read.table("Assignment 6 Dataset.txt", header=TRUE, sep=",")
+x
+```
+
+### Step 2
+#### Using the plyr package to add a Grade.Average column to the data-frame
+
+```{r}
+library(plyr)
+y = ddply(x, "Sex", transform, Grade.Average=mean(Grade))
+y
+```
+
+### Step 3
+#### Printing the updated dataset to a local file
+
+```{r}
+write.table(y, "Sorted_Average")
+```
+
+#### Converting the file to CSV with an additional function argument
+
+```{r}
+write.table(y, "Sorted_Average", sep=",")
+```
+
+### Step 4
+#### Filtering the dataset to only include names that contain the letter "i", using a combination of the subset() and grepl() functions
+
+```{r}
+newx = subset(x, grepl("[iI]", x$Name))
+newx
+```
+
+#### Writing the 'newx' subset data to a new local file
+
+```{r}
+write.table(newx,"DataSubset", sep=",")
+```
