@@ -169,6 +169,11 @@ p {
     font-style: italic;
 }
 
+iframe {
+    width:50vw; 
+    height: 30vw;
+    margin-left: 3vw;
+}
 
 /* Mobile screen styling */
 
@@ -302,4 +307,9 @@ p {
         font-weight: 400;
     }
 
+    iframe {
+        width: 70vw;
+    }
+
   }
+
