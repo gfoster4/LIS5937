@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="visual.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>Blog for LIS 4317</title>
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<h1>Visual Analytics Blog</h1>
+		<!-- <div class = "circle">
+			<svg>
+				<filter id="wavy">
+				<feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">
+					<animate attributeName="baseFrequency" dur="60s" values="0.02;0.005;0.02" repeatCount="indefinite">
+				</feTurbulence>
+				<feDisplacementMap in="SourceGraphic" scale="30">
+			</filter>
+			   </svg>
+				<br>
+		</div> -->
+		<br>
+		<h2>Gregory Foster</h2>
+	</div>
+	<br>
+	<br>
+	
+	<div class="post-container">
+		<h3>--Final Project--</h3>
+		<h4>-November 30th, 2020-</h4>
+		<br>
+		<p>
+			The hypothesis I set out to evaluate with this final project was "To what extent does public health perception of e-cigarettes and tobacco based cigarettes differ?"
+			I have a personal interest in this topic as I am currently struggling with nicotine addiction in the form of vaping, and am coming to terms with the adverse health effects
+			of both e-juice vapor and tobacco smoke. From personal experience vaping is much more socially acceptable than smoking cigarettes, however as time goes on I 
+			find more and more reasons to quit.
+			<br>
+			<br>
+			I really liked the visual network produced by researchers in <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-017-4234-7">this academic publication</a> showing the global network of 
+			tobacco control organizations in different countries, shown below: 
+		</p>
+			<br>
+			<br>
+			<img src="images/visual_network_example.jpg">
+			<br>
+			<br>
+		<p>
+			At first I tried looking for pre-made datasets on juul device sales by year to compare to adolescent lung and heart disease rates, however found that datasets of this nature were locked behind paywalls,
+			if available to the public at all. That led me to turn to Twitter for my data, focusing on public perception via text analysis rather than formal datasets. I am working on a different publication using twitter data, 
+			so I already had twitter developer credentials to use for this purpose.
+			<br>
+			<br>
+			I decided that a comparison of visual networks would be the best solution for finding an answer to my hypothesis, so I created two visual networks using Twitter data,
+			one for "vaping health" and one for "cigarette health".
+			<br>
+			<br>
+			For guidance, I followed this <a href="https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/text-mining-twitter-data-intro-r/">twitter text mining tutorial</a>, altering the provided examples as needed. 
+			<br>
+			<br>
+			The full output of my R file is shown below, annotated with the relevant steps took to create the visualizations:
+		</p>
+		<br><br>
+		<object class="pdf" data="Final_Project.pdf" type="application/pdf" width="700px" height="800px">
+ 			<p><a href="Final_Project.pdf">Download Project R Output PDF</a></p>
+		</object>
+		<br><br><br>
+		<p>
+			After producing the two network visualizations shown in the pdf file above, I ran them through adobe illustrator and produced the graphic below: 
+		</p>
+		<br><br>
+		<div class="img">
+			<img id="largeIMG" src="images/vaping_network_comparison.png">
+		</div>
+		<br>
+		<p>
+			The graphic is quite large, but I like how it turned out. I grouped all of the word clusters in both 
+			visual networks with see-through bubbles of different colors to aid comprehension, and made a summary below
+			each network made up of bullet points. 
+			<br><br>
+			Both the vaping health and the cigarette health visual networks contain references to public health risks and warnings,
+			which was quite surprising. I anticipated discussion and awareness of these risks for the cigarette data group, however 
+			thought the vaping data would be slighly more ignorant of the health complications. This was a pleasant surprise.
+			<br><br>
+			Harm reduction was another common theme. For vaping, my best guess is that harm reduction is referred to in the context of 
+			switching to vaping as an alternative to smoking tobacco, which is a form of harm reduction. For cigarettes, I understand that 
+			several movements are in the works to produce lower nicotine content cigarettes, which may be what these tweets were referring to. 
+			<br><br>
+			Both visualizations include references to covid 19, however the cigarette visualization groups the term together with "raises", "severe", and "risk", 
+			suggesting that there is more awareness of the severe complications smokers deal with when acquiring covid, as their lungs are already weakened from the tobacco.
+			<br><br>
+			As expected, only the vaping visualization included names of brands selling products, such as <a href="https://www.legionofvapers.com/">"legionvaping"</a>, and vaping advocacy sites like <a href="https://grimmgreen.com/">"grimmgreen"</a> 
+			and <a href="https://regulatorwatch.com/">"regwatch"</a>,
+			however also included the name of a site condemning these products called <a href="https://www.smokefreeworld.org/">"smokefreedn"</a>. 
+			<br><br>
+			A word cluster in the cigarette network caught my attention, as it referenced the Indiana legistlative leaders. A quick google search of current Indiana
+			legislation dealing with tobacco revealed that there is a pending tax increase on the sales of cigarettes in the state of Indiana, as an 
+			attempt to raise more money for the state while cutting down on their very high smoking population, cited at 21.8% of all Indiana adults.
+			The article with this statistic can be found <a href="https://www.pharostribune.com/news/state_news/article_6c767bf2-302d-11eb-95ff-0be5017ba5ac.html">here</a>. 
+			<br><br>
+			The beauty of twitter data is the timeliness and relevance it provides. The API only scrapes tweets as far back as 9 days, so these network visualizations
+			truly represent the current public sentiment of both vaping health and cigarette health by users of Twitter.
+			<br><br>
+			Returning to my original hypothesis of : "To what extent does public health perception of e-cigarettes and tobacco based cigarettes differ?", I would say that the 
+			comparison of these visual networks has established that the public perception of e-cigarettes and tobacco based cigarettes are not very far apart. 
+			Despite the clear differences in the prevelance of advertising for current vaping products, both visualizations emphasized the harm of these two products far more than
+			the supposed benefits of them. 
+			<br><br>
+			I was honestly expecting to see a much larger difference in the public health perception of vaping and cigarettes, but found that the public is beginning to see the two 
+			in much the same light.
+			<br><br>
+			This small taste of visual network analysis really makes me want to understand the process to a much greater degree and find more valuable insights in a variety of topics. 
+			Hopefully I can use what I have learned in this project to improve understanding of Covid-19 and its relation to homelessness. I hope this project is well received, and I wish everyone
+			reading a joyful and safe holiday season.
+		</p>
+		<br><br>
+	</div>
+
+	<div class="post-container">
+		<h3>--Module 13--</h3>
+		<h4>-November 21st, 2020-</h4>
+		<br>
+		<p>
+			For this week's animation module I used R to create two different gifs. 
+			Both visualizations utilize the gganimate library that allows a ggplot to be turned into a gif with just a few extra lines of code.
+			<br>
+			<br>
+			The first animation, shown below, was created with the mtcars dataset. It plots Horsepower against Weight, and animates the data by number of cylinders. 
+			I made the background of the plot black and text white, and inserted a dynamic subtitle that displays which cylinder group is currently being shown. I'm personally
+			very happy with the results, as it makes it much easier to understand the impact that the number of cylinders have on the weight and horsepower of vehicles. 
+			I used <a href="https://gganimate.com/articles/gganimate.html">this webpage</a> to learn how to use gganimate.
+		</p>
+		<br>
+		<div class="img">
+			<img src="images/module_13_img_1.jpg">
+			<img id="gif" src="images/module_13_gif_1.gif">
+		</div>
+		<br>
+		<p>
+			The second visualization is an alteration of the datasauRus visualization found <a href="https://towardsdatascience.com/animating-your-data-visualizations-like-a-boss-using-r-f94ae20843e3">on this webpage</a> under the gganimate section.
+			The original gif cycled between several plotted images, but I changed it to only cycle between the dinosaur and my own 
+			plotted image of an underlined V, for Visual Analytics. The end result is shown below, with the original plot ontop:
+		</p>
+		<br>
+		<p>
+			Original (only altered from white background to black):
+		</p>
+		<br>
+		<div class="img">
+			<img src="images/module_13_img_2.jpg">
+			<img id="gif" src="images/module_13_gif_2.gif">
+		</div>
+		<br>
+		<p>
+			My variant is below. I first had to add the datasaurus_dozen dataframe to the environment so it could be analyzed and edited. I inspected the 
+			dataframe and then removed all rows that didn't produce the dino image. I then created my own dataframe with x,y coordinates for the underlined
+			V, and combined both to form the dataframe to plot.
+		</p>
+		<br>
+		<div class="img">
+			<img src="images/module_13_img_3.jpg">
+			<img src="images/module_13_img_4.jpg">
+			<img id="gif" src="images/module_13_gif_3.gif">
+		</div>
+		<br>
+	<br>
+	<p>
+		I'm honestly disappointed with how the second visualization ended up, I originally wanted to plot some sort of animal. I searched online for atleast an hour
+		for ways to convert a line drawing into a set of x,y coordinates so I could make a more interesting plotted image, but this was to no avail. 
+	</p>
+	<br>
+	<p>
+		As always, the full R output can be downloaded <a href="module_13.docx">here</a>. Surprisingly the gifs actually work in microsoft word!
+	</p>
+	</div>
+
+	<div class="post-container">
+		<h3>--Module 12--</h3>
+		<h4>-November 15th, 2020-</h4>
+		<br>
+		<p>
+			For module 12 I generated 4 different social networks created by different randomly generated data points, using ggplot2, visNetwork, and threejs respectively.
+			<br><br>
+			The first social network was created using the code provided by Dr. Friedman in the assignment, shown below. There are two different plots of the same network:
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_12_img_011.jpg">
+				<img src="images/module_12_img_022.jpg">
+				<img src="images/module_12_img_012.jpg">
+				<img src="images/module_12_img_023.jpg">
+			</div>
+		<br>
+		<p>
+			The second social network was created by following the directions of Katherine Ognyanova on her blog post "Static and dynamic network visualization with R".
+			I used three possible variants out of many provided in the blog to display here. Below are the star, circle, and sphere layouts of the randomly generated social network:
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_12_img_013.jpg">
+				<img src="images/module_12_img_032.jpg">
+				<img src="images/module_12_img_014.jpg">
+				<img src="images/module_12_img_033.jpg">
+				<img src="images/module_12_img_015.jpg">
+				<img src="images/module_12_img_034.jpg">
+		</div>
+		<br>
+		<p>
+			For the third social network I looked through the visNetwork documentations and found the proper syntax for generating node and edge data points in order to generate an interactive network visualization.
+			I chose to generate 300 nodes, with a 200 edge sample from the 1:300 node list. Surprisingly the most difficult part of the entire process was figuring out how to make the 
+			nodes a different color than their default light blue. I kept trying to alter arguments in the visNetwork function but after endless trial and error
+			it ended up being a simple argument in the data.frame argument assigned to the nodes variable. While browsing the visNetwork documentation I came across the syntax for placing navigation buttons in the lower corners of the visualization.
+			The resulting code and visualization is shown below: 
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_12_img_016.jpg">
+		</div>
+		<br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Zdeag7C8LnI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		<br>
+		<p>
+			I really wanted to generate a 3D network visualization as seen in Katherine Ognyanova's blog, section 6.3 'Interactive JS Visualization with threejs'. 
+			I didn't want to use the same data in her blog to avoid copying so I dug around google for a bit and found a cool way of generating a random igraph object. It uses a built-in R function called 'erdos.renyi.game()'. I don't quite understand all of the math behind it, but 
+			the first argument sets the number of nodes, the second argument (if a fraction or decimal like I used) sets the probability of each node being connected by an edge to another node, and the last 'type' argument tells the function whether to generate a plot based off of edge probability (like I did) or a set number. 
+			The probability plot is referred to as 'gnp', and the set number plot is referred to as 'gnm'. Below is the generation of a random igraph object using this function, and the resulting plot without using the threejs library.
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_12_img_017.jpg">
+				<img src="images/module_12_img_041.jpg">
+		</div>
+		<br>
+		<p>
+			I then used the igraph object created above to use in an altered version of Katherine Ognyanova's example. I changed the vertex colors from orange to white, and the background color from white to black. I also set the layout argument to 'layout_on_sphere'. The result is below:
+		</p>
+		<br>
+		<div class="img">
+			<img src="images/module_12_img_018.jpg">
+		</div>
+		<br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ivZ6u7QXDz0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		<br>
+		<p>
+			This was an extremely interesting module, I would like to do more research on how to obtain data to convert into edge lists and adjacency matrices to create more meaningful network visualizations.
+		</p>
+		<br>
+		<p>
+			As always, the full R pdf output can be downloaded <a href="module_12.pdf">here</a>, and includes all links to sources I used for research for proper syntax and functions. The two interactive plots don't show up since I had to convert the html output to pdf, which is why I had to record my screen and upload them as videos.
+		</p>
+		<br>
+	</div>	
+
+	<div class="post-container">
+		<h3>--Module 11--</h3>
+		<h4>-November 8th, 2020-</h4>
+		<br>
+		<p>
+			I ended up making four visualizations for this module on Edward R Tufte. The first is simply the result of the code snippet provided in the assignment details, shown below: 
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_11_012.JPEG">
+				<img src="images/module_11_01.JPEG">
+			</div>
+		<br>
+		<p>
+			The second visualization is a Dot-Dash plot created with the 'lattice' library. It uses the built in 'airpollution' dataset in R. It had 'NA' values to prevent its proper plotting, 
+			so I first had to create a new dataframe named 'air' with all of the NA values omitted. Once done I assigned proper x and y variables to the temp and ozone vectors in the new 
+			dataframe, then followed the instructions on Lukasz Piwek's 'Tufte in R' webpage to create the plot. I ended up adding a linear regression line and a legend displaying 
+			the correlation coefficient as well. The result is shown below:
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_11_021.JPEG">
+				<img src="images/module_11_02.JPEG">
+			</div>
+		<br>
+		<p>
+			The third visualization is a better version of the previous plot, created with the 'ggplot2' library. I found this library to be much more effective
+			at customizing the plot with ease than the lattice library. The result is much better, as shown below:
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_11_031.JPEG">
+				<img src="images/module_11_03.JPEG">
+			</div>
+		<br>
+		<p>
+			The fourth visualization is my personal favorite of this module, created with the highchart package. I browsed through R's built in datasets
+			and found the 'discoveries' dataset and was intrigued, but realized it was structured as a timeseries object. I had to look around the web to 
+			figure out how to properly convert the object to a plottable data frame, and after that realized that the converted 'year'
+			vector was in a datetime format, so had to figure out how to convert it to a numeric vector with just the year. I ended up with the code below:
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_11_041.JPEG">
+			</div>
+		<br>
+		<p>
+			Once I had plottable data I slowly but surely figured out how to use the highchart package to produce the result below:
+		</p>
+		<br>
+		<div class="img">
+				<img src="images/module_11_042.JPEG">
+			</div>
+		<br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/8sH2caLChHo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>
+			I calculated the standard deviation and mean of the 'numDisc' vector using sd(numDisc) and mean(numDisc), then used those 
+			numbers to figure out where to place the -1, +1, +2, and +3 SD lines on the plot. Surprisingly the placement of those horizontal
+			lines was the most frustrating part of this entire project, it took me a solid 2 hours of searching the web to figure out the proper
+			syntax for the highchart R package. Nonetheless I like how it turned out. 
+		</p>
+		<br>
+		<br>
+		<p>
+			This week's assignment was very interesting, I will definitely do further research on Tufte's literature. The complete R output in pdf format can be
+			downloaded <a href="module_11.pdf">here</a>.
+		</p>
+		<br>
+			
+	
+	</div>		
+
+	<div class="post-container">
+		<h3>--Module 10--</h3>
+		<h4>-October 30th, 2020-</h4>
+		<br>
+		<p>
+			This week's time series assignment was much less intensive than the previous module's multivariate analytics, but I chose to make it a bit more difficult by finding and cleaning a dataset found on google.
+			<br><br>
+			The dataset I decided to use was found on <a href="https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016">this webpage</a>. The unmodified csv file can be downloaded <a href="country_population.csv">here</a>. 
+			<br><br>
+			Luckily this module's R file was able to be exported as a pdf document, so I have embedded it below for easy viewing. I have annotated each line explaining my intention behind the code. 
+			<br><br>
+			First I had to look at the dataset and figure out what I was going to plot. I decided that population over time for a well known country would be rather boring, so I decided to find the 
+			least populated country in the world as of 2016 and plot its growth from 1960 to 2016. This ended up being Tuvalu, a small island nation and British Colony in the middle of the Pacific ocean.
+			This is their flag:
+			<br><br>
+			<div class="img">
+				<img src="images/module_10_01.jpg">
+			</div>
+		</p>
+		<p>
+			I ended up creating two vectors, one for all of the years between 1960 and 2016, and the other with the row for Tuvalu's data. In order to create the Tuvalu vector I had to 
+			clean the initial dataframe substantially, removing the first 4 columns, every row other than 244, and removing the column titles. Once I inserted the only remaining row from 
+			the dataframe into the empty tuvalu vector I had created earlier, it was displayed as a list. I converted it to a vector using the unlist() function in R. 
+			<br><br>
+			Once my two vectors were ready, I made a new dataframe with them called tuvPopG, standing for "Tuvalu Population Growth". With this new dataframe I was finally able to start plotting. 
+			<br><br>
+			Both graphs can be seen in the embedded pdf file below, created by compiling the R script for this module. The first graph is a simple scatter plot showing Tuvalu's population growth over time.
+			The second plot displays the same information, but increases the size of the data points according to the relative size of the population. I like how this one
+			turned out, it looks good while emphasizing the population growth over time in a visual manner. 
+		</p>
+		<br><br>
+		<object class="pdf" data="module_10.pdf" type="application/pdf" width="700px" height="800px">
+ 			<p><a href="module_10.pdf">Download Module R Output PDF</a></p>
+		</object>
+		<br><br>
+		<p>
+			This was a really fun module, I enjoyed learning about the nation of Tuvalu and testing out time series plotting on real data. 
+		</p>
+	
+	</div>
+
+	<div class="post-container">
+		<h3>--Module 09--</h3>
+		<h4>-October 25th, 2020-</h4>
+		<br>
+		<p>
+		I once again used the movie data from IMDB for this module on multivariate analytics. Due to the nature of one of the plot libraries
+		I used in the process, the R-studio output only works as an HTML file, which my free web provider will not allow for uploading... You can access the full pdf file <a href="module_9_pdf.pdf">here</a> instead. The full data file used 
+		in this module can be downloaded <a href="movies.csv">here</a>. 
+
+		<br><br>
+		First I altered the movie data in excel to include only movie rating, year, budget, and gross. I then eliminated all rows containing null values to avoid errors in plotting.
+		<br><br>
+		<div class="img">
+				<img src="images/module_09_01.jpg">
+			</div>
+		</p>
+		<p>
+		I then loaded the newly edited csv file into R and converted the 'rating' column data into an ordered factor, as shown below: 
+		<br><br>
+		<div class="img">
+				<img src="images/module_09_02.jpg">
+			</div>
+		</p>
+		<p>
+		This was necessary in order for the plotting libraries in R to recognize this data as ordinal and produce the desired results.
+		Next I created two basic multivariate plots. The first plot compared movie budget to movie gross, categorized by movie rating.
+		Each different rating resulted in a different shape on the visual, shown below:
+		<br><br>
+		<div class="img">
+				<img src="images/module_09_03.jpg">
+			</div>
+		</p>
+		<p>
+		The next plot compares movie year against movie budget, with the radii of data points being determined by their gross values:
+		<br><br>
+		<div class="img">
+				<img src="images/module_09_04.jpg">
+			</div>
+		</p>
+		<p>
+		I then wanted to try out multivariate parallel plotting, for which I used 
+		the 'lattice' and 'cdparcoord' R libraries. The first plot was extremely messy and difficult to understand, as shown below:
+		<br><br>
+		<div class="img">
+				<img src="images/module_09_05.jpg">
+			</div>
+		</p>
+		<p>
+		The second plot, however, proved to be very useful, as the visual produced by the 
+		cdparcoord library is dynamic. Here is a short video showing it in action:
+		<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/hH0RmUalPE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</p>
+		<p>
+		With all of the lines visible it is a jumbled mess, however once you start narrowing down the viewing criteria you can 
+		see the relationships between specific movie ratings, year of release, budget, and gross. Towards the end of the clip,
+		for example, only data for PG movies released in 2009 that had a gross revenue of 146 million dollars are displayed.
+		<br><br>
+		Unfortunately I did not notice any specifically interesting patterns, however I would like to do 
+		further explorations with parallel plots with different data sets in the near future.
+		The code to produce this interactive plot is shown below:
+		<br><br>
+		<div class="img">
+				<img src="images/module_09_06.jpg">
+			</div>
+		</p>
+		<p>
+		Just two simple lines of code using the cdparcoord library can produce such an elaborate, interactive plot!
+		I'm honestly blown away with R's capabilities so far...
+		<br><br>
+		This final plot utilizes contrast and repetition, two of the five principles of design discussed in this week's
+		lecture, to establish powerful visualizations. The numerous data points converted into lines in the parallel plot
+		solidify any existing patterns, especially once the data is narrowed down as shown in the video. The contrast
+		between the selected lines and the unselected ones allow the user to clearly see the patterns in the data, although
+		increasing this contrast would be useful for future parallel plots. 
+		<br><br>
+		Once again, the full pdf output from this module can be downloaded <a href="module_9_pdf.pdf">here</a>. It will not allow you to use the 
+		interactive plot, but you can see everything else clearly. In case you wanted to run the full plot, I have also included my full R file to 
+		download <a href="module_9.R">here</a>.
+		</p>
+	</div>
+		
+
+	<div class="post-container">
+		<h3>--Module 08--</h3>
+		<h4>-October 15th, 2020-</h4>
+		<br>
+		<p>
+		I took a slightly different route in this module and reused the dataset of IMDB movies from 1986-2016 I previously cleaned in module 6 for my plots. <br><br>
+		The first plot, g, compares movie publication year to the gross revenue of each movie, but it ended up being messy and difficult to understand. To 
+		fix that, I managed to use dplyer library functions to select subsets of the data by year, finding the mean value of gross revenues for all of the movies released each year.
+		I then turned that subset of data into a vector, made an accompanying vector of the years, and combined them into a new data frame to plot. <br><br>
+		The resulting second plot, gg, is much easier to look at and shows a fairly strong, positive correlation between year and mean gross revenue for the movies in the dataset. <br>
+		It must be recognized, however, that outlier movies (smash hits) that could be seen in the first chart likely positively skewed the means for each year. <br>
+		Other explanations could be the gradual increase in movie popularity, streaming options becoming more prevalent adding to the gross of more recent films, and economic inflation.
+		<br><br>
+		The last plot, ggg, is very similar to gg except it's y-axis displays values of a vector derived from a subset of movie gross maxes for each year. 
+		<br><br>
+		One thing I am realizing now looking at the plots are that the y-axis is slightly different for each one, making the max values look lower than the mean, which is not the case.
+		In hindsight I should have altered the y-axis scaling to show the same area for each plot, but now I know for next time. All-in-all I learned a lot about
+		plotting with ggplot2, which is what matters. 
+		<br><br>
+		</p>
+		<br>
+		<br>
+		<object class="pdf" data="module_8.pdf" type="application/pdf" width="700px" height="800px">
+ 			<p><a href="module_8.pdf">Download Module R Output PDF</a></p>
+		</object>
+	</div>
+		
+
+	<div class="post-container">
+		<h3>--Module 07--</h3>
+		<h4>-October 11th, 2020-</h4>
+		<br>
+		<p>
+			I decided to make two different plots for this module. The first is a histogram showing the density of mtcars$mpg with mean and median lines, shown below.
+
+			<br>
+			<br>
+
+			<div class="img">
+				<img src="images/module_07_02.JPG">
+			</div>
+		</p>
+		<br>
+		<br>
+		<p>
+			From the visualization above it can be seen that the mean mpg is greater than the median mpg, which means that the distribution is positively skewed.
+			<br>
+			<br>
+			I then plotted four visualizations in a 2 by 2 matrix, shown below. 
+
+			<br><br>
+
+			<div class="img">
+				<img src="images/module_07.jpg">
+			</div>
+
+		</p>
+
+		<br>
+
+		<p>
+			The first column shows a histogram and box plot of mtcars$mpg, the second column shows a histogram and box plot of mtcars$wt. 
+			I'm looking forward to getting into more advanced visualizations with real datasets!
+		</p>
+		
+
+
+	</div>
+
+
+	
+
+	<div class="post-container">
+		<h3>--Module 06--</h3>
+		<h4>-September 26th, 2020-</h4>
+		<br>
+		
+		<div class="download">
+			<a href="images/module_6.docx" download="Module6 R File">~DOWNLOAD R FILE OUTPUT~</a>
+		</div>
+
+		<p>
+			For this module I started with basic R charts and graphs to display some nonsense datasets and have some fun. I then moved on
+			to manipulating an actual dataset to produce a graph aimed to provide some insight. Below are the 4 silly charts I made, not much
+			explaination is needed but the code can be found in the .docx file attached to the top of this module. It is the output of the R file
+			I wrote for this module, with comments placed for better understanding. 
+
+			<br>
+			<br>
+
+			<div class="img">
+				<img src="images/module_06_img1.JPG">
+				<img src="images/module_06_img2.JPG">
+				<img src="images/module_06_img3.JPG">
+				<img src="images/module_06_img4.jpg">
+			</div>
+		</p>
+		<br>
+		<br>
+		<p>
+			I found a csv file using Google datasets found <a href="https://www.kaggle.com/danielgrijalvas/movies">here</a> 
+			that contains data on every movie listed on IMDB from 1986 to 2016. I then loaded it into R studio and did some basic 
+			data cleaning, removing several columns I wasn't interested in. I did some basic analysis, figuring out that the 
+			worst scored film in the dataset was "Saving Christmas", with a 1.5 out of 10. I also figured out that the longest
+			movie in the dataset was "The Best of Youth", with a runtime of 366 minutes or just over 6 hours. 
+			<br>
+			<br>
+			I then plotted the runtime data (x) against the IMDB score data (y) to produce a line graph, to which I added a best fit line using
+			"abline(lm())". The resulting graph is shown below. We can reasonably conclude that there is no reliable, nor significant correlation between 
+			movie runtime and IMDB score in this dataset, simply by viewing this graph.
+
+			<br><br>
+
+			<div class="img">
+				<img src="images/module_06_img5.JPG">
+			</div>
+
+		</p>
+		
+
+
+	</div>
+	
+	<div class="post-container">
+		<h3>--Module 05--</h3>
+		<h4>-September 24th, 2020-</h4>
+		<br>
+		<p>
+			I played around with plot.ly's graphing functionality with the provided dataset, although was a bit confused as to how 
+			this dataset applied to this week's lesson of 'part to whole' data analysis, given it is a set of time series data points. 
+			Regardless, I input the csv file into plot.ly and came up with the initial graph shown below. 
+			<br>
+			<br>
+			<div class="img">
+				<img src="images/module_05_img1.JPG">
+			</div>
+		</p>
+		<br>
+		<p>
+			Above it is shown that I edited the general color scheme of the default graph to dark theme, 
+			and input proper titles to the graph and its respective axes. Then I decided to go further and give the graph 
+			a linear trend line and some more fun colors, shown below.
+			<br>
+			<br>
+			<div class="img">
+				<img src="images/module_05_img2.jpeg">
+			</div>
+		</p>
+		<br>
+		<p>
+			Because I found this dataset inappropriate for exploring part to whole analysis, I took the liberty of finding another
+			'story' (as the textbook calls datasets) to analyze using a combination of R and Adobe Illustrator. I found a dataset describing 
+			the Disney corporation's revenues for 2019, broken down into 4 distinct operating segments. It can be found online 
+			<a href="https://www.statista.com/statistics/193140/revenue-of-the-walt-disney-company-by-operating-segment/">here</a>. 
+			Below is the raw pareto chart generated by ggplot2 in R studio. I used this 
+			<a href="https://stackoverflow.com/questions/10139007/how-to-reproduce-the-pareto-chart-plot-from-the-qcc-package-using-ggplot2">blog post</a> 
+			as a guide for making a pareto chart in ggplot.
+			<br>
+			<br>
+			<div class="img">
+				<img src="images/module_05_img3.JPG">
+			</div>
+		</p>
+		<br>
+		<p>
+			I then spent some time in Adobe Illustrator to make the graph presentable to an audience. The result is below.
+			<div class="img">
+				<img src="images/module_05_img4.JPG">
+			</div>
+			<div class="img">
+				<img src="images/module_05_img5.JPG">
+			</div>
+		</p>
+		<br>
+		<br>
+		<p>
+			From this pareto chart of Disney's 2019 revenue data by operating segments, we can see that 71.36% of their total revenue came from just two segments. 
+			This makes sense, however, when you think about what those segments are. "Parks, experiences and products" are a massive part of what Disney is, as well as their "media networks". 
+			I'm not too sure what would be considered "studio entertainment" or "direct-to-consumer", but given that those two segments make up a much smaller
+			proportion of Disney's total revenue, it makes sense that I don't know about them. 
+			<br>
+			<br>
+			Here is an image of the R code I ran to create the initial pareto graph:
+			<div class="img">
+				<img src="images/module_05_img6.JPG">
+			</div>
+		</p>
+
+
+	</div>
+	
+	<div class="post-container">
+		<h3>--Module 04--</h3>
+		<h4>-September 15th, 2020-</h4>
+		<br>
+		<p>I narrowed down the dataset to 6 columns, and chose to visually analyze geographic location against number of vehicle accidents.
+			<br>
+			<br>
+			<div class="img">
+				<img src="images/module_04_img1.JPG">
+			</div>
+		</p>
+		<br>
+		<p>This first image shows the United States with larger bubbles where there have been more recorded vehicle accidents.
+		</p>
+			<br>
+			<div class="img">
+				<img src="images/module_04_img2.JPG">
+			</div>
+		<p>
+			This second image shows the same data but each geographic location is its own square, with the larger squares having more recorded accidents. You can see that the largest square is Chicago, IL, which makes a lot of sense given its dense urban environment packed with cars.
+		<br><br>
+			I had a lot of difficulty getting Tableau to display the geographic locations properly, I ended up having to enter each one by hand. Consequently the visualizations do not display the full data set, which is unfortunate. However I feel good about the results so far, they look good.
+		</p>
+
+	</div>
+
+	<div class="post-container">
+		<h3>--Module 03--</h3>
+		<h4>-September 14th, 2020-</h4>
+		<br>
+		<p>For the third module's assignment I upgraded the previous module's Chinese literacy visualization using Adobe Illustrator.
+			<br>
+			<br>
+			<div class="img">
+				<img src="images/module_03_img.jpg">
+			</div>
+		</p>
+		<br>
+		<p>I added a chinese flag to the background for some pizazz, and pointed out the hotspots for illiteracy around the country. The quality is not what I would have liked, however it is my first time using Adobe Illustrator so I can improve over time.
+		</p>
+	</div>
+	
+	<div class="post-container">
+		<h3>--Module 02--</h3>
+		<h4>-September 5th, 2020-</h4>
+		<br>
+		<p>For the second module's assignment I found a dataset posted on <a href="https://www.statista.com/statistics/278568/illiteracy-rate-in-china-by-region/">Statista</a> by searching google's platform. It is the 2018 Chinese illiteracy rates by region. 
+			I had to alter the file a bit to get Tableau to display it correctly, but the data is 100% the same. I uploaded the altered excel file to <a href="https://drive.google.com/file/d/1gv7Aj36BWd6G0Iv8Cr6K-rCWqvMgF7DR/view?usp=sharing">google docs</a> for viewing.
+			I left the original "overview" sheet from the creators of the data, you have to click the "data" sheet to see my adjustments.
+			<br><br>
+			After making the proper adjustments to the data (creating columns for country name, country code, region, adding proper titles to the percentages, etc.), the result in tableau is shown below.
+			<br>
+			<br>
+			<div class="img">
+				<img src="images/module_02_img.JPG">
+			</div>
+		</p>
+		<br>
+		<p>I also changed the default blue color scheme to red, as shown above. From this image it is quite difficult to examine the information but you can use <a href="https://public.tableau.com/profile/greg.foster#!/vizhome/ChinaIlliteracyRates2018byRegion/2018ChineseIlliteracyRatesbyRegion">this link</a>
+			to view it on Tableau public. The darker the red color, the more illiterate a given region is. It is very clear from this visualization that much needs to be 
+			done in Tibet regarding education.
+			<br><br>
+			In terms of improving this visualization I would certainly make a larger color distinction between the regions with similar illiteracy rates, since Tibet's illiteracy rate makes every other region look pale in comparison. I suppose removing Tibet's data as an outlier would be one solution. 
+			Making the surrounding countries fade into the background so China is more highlighted to the eye would also help. Perhaps putting a bold line around China's border would suffice. 
+			<br><br>
+			In general it is already fairly straight forward to analyze visually, as deep red is commonly associated with negative things, which holds true in this visualization.
+			<br><br>
+			I'm looking forward to performing more detailed visual analyses with this platform, it was fairly simple to use! 
+		</p>
+	</div>
+	
+	<div class="post-container">
+		<h3>--Module 01--</h3>
+		<h4>-August 27th, 2020-</h4>
+		<br>
+		<p> For the first module's assignment I chose to learn about the visual display of the Coronavirus provided by the 
+			Florida State Governor's office. It is quite impressive and has a lot of information to share, although it could be 
+			broken down into simpler parts to make it easier to digest.
+			<br><br>
+
+			<div class="img">
+				<img src="images/module_01_img.JPG">
+			</div>
+		</p>
+		<p>
+			According to Keim et. al, "Visual analytics combines automated analysis techniques with interactive
+			visualizations for an effective understanding, reasoning and decision making on
+			the basis of very large and complex data sets."
+			They assert that "The goal of visual analytics is the creation of tools and techniques to enable
+			people to: <br><br>
+		</p>
+			<ul>
+				<li>Synthesize information and derive insight from massive, dynamic, ambiguous, and often conflicting data.</li>
+				<li>Detect the expected and discover the unexpected.</li>
+				<li>Provide timely, defensible, and understandable assessments.</li>
+				<li>Communicate assessment effectively for action."</li>
+			</ul> 
+			<br>
+		<p>
+			The Coronavirus visualization is a prime example of visual analytics as described by Keim et. al, as it takes 
+			a large number of unweildy datapoints (Covid cases, geographic locations, dates and times), and makes sense of 
+			them in an aesthetically pleasing and understandable manner. 
+			<br><br>
+			The visualization enables the formation of knowledge from information, 
+			as it places the Covid cases in context of location and date around Florida. With that knowledge we can extract wisdom such as "
+			We should probably wear masks when we go to the store", and "social distancing is probably a good idea so we don't die." While these
+			things may seem like common sense to those in the know, it is useful to provide such visualizations to the less informed public so they can act accordingly.
+			<br><br>
+			Reference:
+		</p>
+			<ul>
+				<li>Keim, D., Andrienko, G., Fekete, J. D., Görg, C., Kohlhammer, J., & Melançon, G. (2008). Visual analytics: Definition, process, and challenges. 
+					In Information visualization (pp. 154-175). Springer, Berlin, Heidelberg.</li>
+			</ul>
+	</div>
+	
+</div>
+
+</body>
+</html>

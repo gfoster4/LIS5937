@@ -1,0 +1,26 @@
+{
+    "id": "D5B46DC4",
+    "path": "C:/Users/Greg Foster/Desktop/gfoster/man/goodbye.Rd",
+    "project_path": "man/goodbye.Rd",
+    "type": "r_doc",
+    "hash": "3374669356",
+    "contents": "",
+    "dirty": false,
+    "created": 1616006510230.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1616006501,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1616006501,
+    "read_only": true,
+    "read_only_alternatives": [
+        "R/goodbye.R"
+    ]
+}
