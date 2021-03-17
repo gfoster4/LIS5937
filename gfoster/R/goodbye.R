@@ -11,5 +11,5 @@
 #' goodbye("Fun")
 #' }
 goodbye <- function(x) {
-  print(paste0("Goodbye ", x, " good seing you!"))
+  print(paste0("Goodbye ", x, " good seeing you!"))
 }

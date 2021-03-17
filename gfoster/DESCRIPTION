@@ -4,9 +4,7 @@ Title: Does Something Really Useful
 Version: 0.1.0
 Author: Greg Foster
 Maintainer: Greg Foster <gregf@email.net>
-Description: This is a package under development that does something really 
-useful for statistical programmers hard at work. Feel free to add to 
-this package, contact me if you run into any issues while using it.
+Description: This is a package under development that does something really useful for statistical programmers hard at work. Feel free to add to this package, contact me if you run into any issues while using it.
 License: CC0
 Encoding: UTF-8
 LazyData: true
