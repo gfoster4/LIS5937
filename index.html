@@ -22,26 +22,41 @@
 
     <div class="content-grid">
         <div class="post-box">
-            <h1>Module 10: Building a Package with R-Studio</h1>
-            <h3>--March 17th, 2021--</h3>
+            <h1>Module 11: Debugging a Function in R</h1>
+            <h3>--March 27th, 2021--</h3>
             <br>
             <hr>
         <br>
         <p>
-            This week's assignment required the creation of a test package to learn the basic process of creating a package using 
-            R-Studio, and to fill out the test package's description file. 
+            This week's assignment required the debugging of a function posted on Canvas. I initially had trouble understanding what the function was meant to do, but eventually figured out that it 
+            determines whether or not outliers, determined by Tukey's IQR range principles, exist in a given column of a matrix or dataframe. It is intended to produce a vector of boolean values, with TRUE 
+            indicating that an outlier does indeed exist in the specified column of the dataset. 
             <br><br>
-            The videos and readings posted on Canvas were very helpful, and the overall assignment went smoothly.
+            The initial code was broken due to the inclusion of 'tukey.outlier' in the function, which R did not know what to do with. 
+            <img src="images/module_11_01.png">
+            The code above shows the initial function, the sample data I came up with to test the function, and the resulting errors. Both while attempting to run the function on its own with my sample matrix, and while 
+            running the 'debug()' function, R returned an error message of "Error in tukey.outlier(x[, j]) : could not find function "tukey.outlier". This indicated that this was an undefined portion of the function, and needed addressing if the 
+            tukey_multiple() function were to properly work. 
             <br><br>
-            I created a test package named "gfoster", with a single function named "goodbye" that takes one parameter, x, and prints out the 
-            message "Goodbye x, nice to see you!". The description file can be seen below. It is filled with gibberish for the sake of 
-            the example, please don't think this is my attempt at a real package haha.
-            <img src="images/module_10.JPG">
-            An example of the package being loaded and used in R is below.
-            <img src="images/module_10_01.JPG">
-            As always, all of the files can be found on my <a href="https://github.com/gfoster4/LIS5937">Github page</a>. The description file can 
-            be located in the "gfoster" folder, and should have a commit comment of "module 10 update 3".
+            I searched around online to look for functions similar in name to tukey.outlier() and came across a function named tukey_outlier(), found within the funModeling package in R. After downloading the package and loading the library into the current 
+            R session, I was able to successfully run the tukey_multiple() function by changing tukey.outlier() to tukey_outlier().
+            <img src="images/module_11_02.png">
+            Oddly enough, after this the debug function started giving me an error message: 
+            <img src="images/module_11_03.png">
+            I am unsure of the reasoning behind this...
+            <br><br>
+            Hopefully this was the solution to the debugging issue, however I have a feeling I overlooked something simple... 
+            <br><br>
+            As always, all of the files can be found on my <a href="https://github.com/gfoster4/LIS5937">Github page</a>. The full pdf output of this assignment is found below, with code commented out that returned errors.
         </p>
+
+        <br><br>
+        <object data="module_11.pdf" type="application/pdf" width="100%" height="1000px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+             No biggie... you can <a href="resume.pdf">click here to
+            download the PDF file.</a></p>  
+          </object>
+        <br>
         </div>
         
     </div>
