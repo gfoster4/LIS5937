@@ -1,0 +1,66 @@
+---
+title: "module_12"
+author: "Greg Foster"
+date: "April 4th, 2021"
+output:
+  html_document:
+    css: m12.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+This week's module covered the basics of R-Markdown, which is R-Studio's built-in 
+application for publishing beautifully formatted documents with embedded code and 
+visuals. 
+
+There are a **ton** of different *options* for both formatting characters, numbers
+(1^2^3^4^5), and code chunks. 
+
+In-line code lets you embed dynamic calculations into sentences. For example, I can say
+that the square root of pi is `r sqrt(3.1415926535)` without breaking a sweat.
+
+You can also upload ![](images.png)
+
+HTML elements can be used, such as the line break (hr) element. 
+
+<hr>
+
+# You Can 
+## Also Control 
+### The Size of
+#### Your
+##### Text... 
+
+*But you probably won't want to do it like that...*
+
+<hr>
+
+Below is a quick example of an embedded visualization using ggplot2. `r library(ggplot2)` 
+
+```{r} 
+ggplot(mtcars, aes(wt, hp, col=hp)) +
+  geom_point() +
+  labs(title="Weight and Horsepower Distribution", x="Weight", y="Horsepower") +
+  theme_light()
+```
+
+<hr>
+
+And here is a video of a cat being cute. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/75y-fIrvkow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-external="1"></iframe>
+
+<hr>
+
+## Conclusion
+
+R-markdown is a powerful and versatile tool for sharing your work with others in the 
+R community. I enjoyed playing around with it this week, and look forward to learning
+about Shiny Apps in Module 13. 
+
+As always, the files for this module can be found on my <a href="https://github.com/gfoster4/LIS5937">GitHub Page</a>. 
+
