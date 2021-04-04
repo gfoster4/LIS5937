@@ -1,0 +1,13 @@
+body{
+  font-family: Georgia;
+  font-size: 12pt;
+}
+/* Headers */
+
+hr {
+  border: 1px solid black;
+}
+
+iframe {
+  width: 50vw;
+}
