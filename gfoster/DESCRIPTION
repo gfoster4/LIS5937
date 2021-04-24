@@ -1,10 +1,10 @@
-Package: gfoster
+Package: osj_checker
 Type: Package
-Title: Does Something Really Useful
+Title: Check Peer-Reviewed Status of an Academic Journal Article
 Version: 0.1.0
 Author: Greg Foster
 Maintainer: Greg Foster <gregf@email.net>
-Description: This is a package under development that does something really useful for statistical programmers hard at work. Feel free to add to this package, contact me if you run into any issues while using it.
+Description: This is a package under development that takes a DOI from an academic journal article as an input, and outputs whether it is peer-reviewed. With help from the  Feel free to add to this package, contact me if you run into any issues while using it.
 License: GNU  General Public License
 Encoding: UTF-8
 LazyData: true
